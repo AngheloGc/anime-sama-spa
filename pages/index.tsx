@@ -1,6 +1,7 @@
+import { Homepage } from '../components/Home/homepage'
+import { Layout } from '../components/Layout'
 import { getAllPostsForHome } from '../lib/api'
-import { Homepage } from './Home/homepage'
-import { Layout } from './Layout'
+
 
 export default function Index({ allPosts, footerPosts }) {
 

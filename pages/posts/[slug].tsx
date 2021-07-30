@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import React from 'react'
+import { Layout } from '../../components/Layout'
 import { getAllPostsForHome, getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
-import { Layout } from '../Layout'
 import { Content, FeaturedImage, PostWrapper, PublicationDate, Title } from './styled'
 
 export default function Post({ post, posts, preview, popularPosts }) {
