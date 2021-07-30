@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router'
 import React from 'react'
 import { Layout } from '../../components/Layout'
+import { PostPage } from '../../components/PostPage'
 import { getAllPostsForHome, getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
-import { Content, FeaturedImage, PostWrapper, PublicationDate, Title } from './styled'
+
 
 export default function Post({ post, posts, preview, popularPosts }) {
   const router = useRouter()
@@ -14,14 +15,7 @@ export default function Post({ post, posts, preview, popularPosts }) {
 
   return (
     <Layout footerPosts={popularPosts}>
-      <PostWrapper>
-        <FeaturedImage src={post.featuredImage.node.sourceUrl} />
-        <Title>{post.title}</Title>
-        <PublicationDate>
-          <p>Publicado el {post.date.split('T')[0]} por {post.author.node.name}</p>
-        </PublicationDate>
-        <Content dangerouslySetInnerHTML={{__html: post?.content}}></Content>
-      </PostWrapper>
+      <PostPage postData={post} />
     </Layout>
   )
 }
