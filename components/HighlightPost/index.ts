@@ -1,0 +1,1 @@
+export { HighlightPost } from './HighlightPost'

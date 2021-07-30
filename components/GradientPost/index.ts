@@ -1,0 +1,1 @@
+export { GradientPost } from './GradientPost'

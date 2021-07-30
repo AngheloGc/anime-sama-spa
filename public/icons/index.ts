@@ -1,0 +1,8 @@
+export { FacebookIcon } from './facebook'
+export { InstagramIcon } from './instagram'
+export { TwitterIcon } from './twitter'
+export { YoutubeIcon } from './youtube'
+export { RedditIcon } from './reddit'
+export { DiscordIcon } from './discord'
+export { DiscordMinimalIcon } from './discordMinimal'
+export { DMCAIcon } from './DMCA'
