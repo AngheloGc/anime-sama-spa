@@ -4,10 +4,10 @@ import { Content, FeaturedImage, PostWrapper, PublicationDate, Title } from './s
 export const PostPage: React.FC<PostPageProps> = ({postData}) => {
   return (
     <PostWrapper>
-      <FeaturedImage src={postData.featuredImage.node.sourceUrl} />
-      <Title>{postData.title}</Title>
+      <FeaturedImage src={postData?.featuredImage.node.sourceUrl} />
+      <Title>{postData?.title}</Title>
       <PublicationDate>
-        <p>Publicado el {postData.date.split('T')[0]} por {postData.author.node.name}</p>
+        <p>Publicado el {postData?.date.split('T')[0]} por {postData?.author.node.name}</p>
       </PublicationDate>
       <Content dangerouslySetInnerHTML={{ __html: postData?.content }}></Content>
     </PostWrapper>
