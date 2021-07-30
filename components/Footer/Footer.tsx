@@ -11,10 +11,14 @@ export const Footer: React.FC<FooterProps> = ({ popularPosts }) => {
                 <FooterLeft>
                     <SectionHeadline label="Lo más leído" appearance="compact" />
                     <PopularPosts>
-                        <HorizontalPost size="x-small" postData={popularPosts[0]} hasExcerpt={false} />
-                        <HorizontalPost size="x-small" postData={popularPosts[1]} hasExcerpt={false} />
-                        <HorizontalPost size="x-small" postData={popularPosts[2]} hasExcerpt={false} />
-                        <HorizontalPost size="x-small" postData={popularPosts[3]} hasExcerpt={false} />
+                        {popularPosts && (
+                            <>
+                            <HorizontalPost size="x-small" postData={popularPosts[0]} hasExcerpt={false} />
+                            <HorizontalPost size="x-small" postData={popularPosts[1]} hasExcerpt={false} />
+                            <HorizontalPost size="x-small" postData={popularPosts[2]} hasExcerpt={false} />
+                            <HorizontalPost size="x-small" postData={popularPosts[3]} hasExcerpt={false} />
+                            </>
+                        )}
                     </PopularPosts>
                 </FooterLeft>
                 <FooterRight>
