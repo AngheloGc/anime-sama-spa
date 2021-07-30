@@ -3,10 +3,10 @@ import { GradientPostContent, GradientPostWrapper, Headline, Tag } from './style
 
 export const GradientPost: React.FC<GradientPostProps> = ({ postData, tag }) => {
     return (
-        <GradientPostWrapper imageUrl={postData.node.featuredImage.node.sourceUrl}>
+        <GradientPostWrapper imageUrl={postData?.node.featuredImage.node.sourceUrl}>
             <GradientPostContent>
                 <Tag>{tag}</Tag>
-                <Headline>{postData.node.title}</Headline>
+                <Headline>{postData?.node.title}</Headline>
             </GradientPostContent>
         </GradientPostWrapper>
     )

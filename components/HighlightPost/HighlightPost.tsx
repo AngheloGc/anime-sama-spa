@@ -14,10 +14,10 @@ export const HighlightPost:React.FC<HighlightPostProps> = ({ label, postData }) 
         <HighlightPostWrapper>
             <HighlightPostContent>
                 <SectionHeadline label={label} />
-                <Headline>{postData.node.title}</Headline>
-                <Excerpt>{handleExcerpt(postData.node.excerpt)}</Excerpt>
+                <Headline>{postData?.node.title}</Headline>
+                <Excerpt>{handleExcerpt(postData?.node.excerpt)}</Excerpt>
             </HighlightPostContent>
-            <FeaturedImage src={postData.node.featuredImage.node.sourceUrl} />
+            <FeaturedImage src={postData?.node.featuredImage.node.sourceUrl} />
         </HighlightPostWrapper>
     )
 }

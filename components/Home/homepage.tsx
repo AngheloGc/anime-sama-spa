@@ -34,7 +34,7 @@ export const Homepage: React.FC<HomepageProps> = ({ posts }) => {
       </MainNews>
       <Separator size={50} />
       <Reviews>
-        <ReviewsBackground imageUrl={reviews[0].node.featuredImage.node.sourceUrl} />
+        <ReviewsBackground imageUrl={reviews[0]?.node.featuredImage.node.sourceUrl} />
         <ReviewsContent>
           <HighlightPost label="Reseña" postData={reviews[0]} />
         </ReviewsContent>
