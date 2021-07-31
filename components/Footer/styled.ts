@@ -4,7 +4,7 @@ export const FooterWrapper = styled.footer`
     background-color: #2C2C2C;
     padding: 4.25rem 4.25rem 0 4.25rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         padding: 2rem;
     }
 
@@ -31,7 +31,7 @@ export const FooterContent = styled.div`
     display: grid;
     grid-template-columns: 1fr 1.1fr;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         grid-template-columns: 1fr;
         grid-gap: 2rem;
     }
@@ -42,7 +42,7 @@ export const FooterLeft = styled.div`
     grid-gap: 1.75rem;
     padding-right: 4rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         padding: 0
     }
 `
@@ -53,7 +53,7 @@ export const FooterRight = styled.div`
     border-left: 1px solid #424242;
     padding-left: 4rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         padding: 0;
         border-left: none;
     }
@@ -62,7 +62,7 @@ export const FooterRight = styled.div`
 export const UsefulLinks = styled.div`
     display: grid;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         grid-gap: 1.5rem;
     }
 `
@@ -70,10 +70,15 @@ export const UsefulLinks = styled.div`
 export const Links = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
     grid-gap: 0.5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         grid-gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-auto-flow: row;
     }
 
     a {
@@ -94,7 +99,7 @@ export const Links = styled.div`
 export const SocialIcons = styled.div`
     display: grid;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         grid-gap: 1.5rem;
     }
 `
@@ -113,14 +118,12 @@ export const Copyright = styled.div`
     justify-content: center;
     padding: 3rem 0 2rem;
 
-    @media (max-width: 768px) {
-        padding: 0;
-    }
-
-
     grid-column: 1 / 3;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
         grid-column: 1 / 2;
     }
 
@@ -135,5 +138,10 @@ export const Copyright = styled.div`
     p {
         margin-left: 0.5rem;
         color: #9A9A9A;
+
+        @media (max-width: 1040px) {
+            margin-left: 0;
+            margin-top: 0.5rem;
+        }
     }
 `

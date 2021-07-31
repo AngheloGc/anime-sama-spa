@@ -26,12 +26,12 @@ export const Footer: React.FC<FooterProps> = ({ popularPosts }) => {
                         <SectionHeadline label="Enlaces" appearance="compact" />
                         <Links>
                             <a href="">Acerca de nosotros</a>
-                            <a href="">Concurso novelas ligeras</a>
                             <a href="">Contacto</a>
-                            <a href="">Cultura Anime Sama</a>
                             <a href="">Media Kit</a>
+                            <a href="">Unirse al Equipo</a>
+                            <a href="">Concurso Novelas Ligeras</a>
+                            <a href="">Cultura Anime Sama</a>
                             <a href="">Spoiler Sama</a>
-                            <a href="">Unirse al equipo</a>
                         </Links>
                     </UsefulLinks>
                     <SocialIcons>

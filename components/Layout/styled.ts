@@ -14,5 +14,9 @@ export const GlobalStyles = createGlobalStyle`
     main {
         max-width: 1040px;
         margin: 3rem auto;
+
+        @media (max-width: 1040px) {
+            margin: 2rem auto;
+        }
     }
 `

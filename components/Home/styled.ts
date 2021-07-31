@@ -14,7 +14,7 @@ export const MainNews = styled.section`
         grid-row: 1 / 3;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         grid-template-columns: 1fr;
         padding: 0 2rem;
 
@@ -70,7 +70,7 @@ export const FeaturedPosts = styled.section`
     display: grid;
     grid-gap: 2.5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         padding: 3rem 2rem;
     }
 `
@@ -80,7 +80,7 @@ export const FeaturedPostsContent = styled.div`
     grid-gap: 1.25rem;
     grid-template-columns: 1fr 1fr 1fr;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         grid-template-columns: 1fr;
     }
 `
@@ -90,7 +90,7 @@ export const SecondaryPosts = styled.section`
     grid-gap: 2.5rem;
     grid-template-columns: 1.5fr 1fr;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         grid-template-columns: 1fr;
         padding: 0 2rem;
     }
