@@ -22,7 +22,7 @@ export const HorizontalPostWrapper = styled.div`
 
     ${(props: HorizontalPostWrapperProps) => props.size === 'small' && css`
         h3 { font-size: 1.1rem } p { font-size: .8rem }
-        img { max-height: 4.4rem }
+        img { max-height: 4.4rem; min-height: 4.4rem; min-width: 8rem; max-width: 8rem; }
     `}
 
     ${(props: HorizontalPostWrapperProps) => props.size === 'x-small' && css`

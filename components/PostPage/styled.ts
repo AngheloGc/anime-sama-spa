@@ -7,7 +7,7 @@ export const PostWrapper = styled.main`
     margin: 2rem auto;
     box-sizing: border-box;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         margin: 0 auto 2rem;
     }
 
@@ -31,8 +31,10 @@ export const FeaturedImage = styled.img`
     object-fit: cover;
     border-radius: 4px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         border-radius: 0;
+        max-height: 16rem;
+        min-height: 16rem;
     }
 `
 
@@ -42,7 +44,7 @@ export const Title = styled.h1`
     font-size: 2.5rem;
     position: relative;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         margin: 0 2rem;
         font-size: 1.8rem;
     }
@@ -52,7 +54,7 @@ export const Content = styled.section`
     line-height: 1.9rem;
     color: #383838;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         padding: 0 2rem;
     }
 
@@ -95,7 +97,7 @@ export const PublicationDate = styled.div`
     margin: 2rem 0 1rem;
     color: #585858;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1040px) {
         padding: 0 2rem;
     }
 `

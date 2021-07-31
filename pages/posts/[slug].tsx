@@ -29,7 +29,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
       preview,
       post: data.post,
       posts: data.posts,
-      popularPosts: allPosts.popular.edges,
+      popularPosts: allPosts?.popular.edges,
     },
   }
 }

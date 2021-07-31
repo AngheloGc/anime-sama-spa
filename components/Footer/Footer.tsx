@@ -11,10 +11,14 @@ export const Footer: React.FC<FooterProps> = ({ popularPosts }) => {
                 <FooterLeft>
                     <SectionHeadline label="Lo más leído" appearance="compact" />
                     <PopularPosts>
-                        <HorizontalPost size="x-small" postData={popularPosts[0]} hasExcerpt={false} />
-                        <HorizontalPost size="x-small" postData={popularPosts[1]} hasExcerpt={false} />
-                        <HorizontalPost size="x-small" postData={popularPosts[2]} hasExcerpt={false} />
-                        <HorizontalPost size="x-small" postData={popularPosts[3]} hasExcerpt={false} />
+                        {popularPosts && (
+                            <>
+                            <HorizontalPost size="x-small" postData={popularPosts[0]} hasExcerpt={false} />
+                            <HorizontalPost size="x-small" postData={popularPosts[1]} hasExcerpt={false} />
+                            <HorizontalPost size="x-small" postData={popularPosts[2]} hasExcerpt={false} />
+                            <HorizontalPost size="x-small" postData={popularPosts[3]} hasExcerpt={false} />
+                            </>
+                        )}
                     </PopularPosts>
                 </FooterLeft>
                 <FooterRight>
@@ -22,12 +26,12 @@ export const Footer: React.FC<FooterProps> = ({ popularPosts }) => {
                         <SectionHeadline label="Enlaces" appearance="compact" />
                         <Links>
                             <a href="">Acerca de nosotros</a>
-                            <a href="">Concurso novelas ligeras</a>
                             <a href="">Contacto</a>
-                            <a href="">Cultura Anime Sama</a>
                             <a href="">Media Kit</a>
+                            <a href="">Unirse al Equipo</a>
+                            <a href="">Concurso Novelas Ligeras</a>
+                            <a href="">Cultura Anime Sama</a>
                             <a href="">Spoiler Sama</a>
-                            <a href="">Unirse al equipo</a>
                         </Links>
                     </UsefulLinks>
                     <SocialIcons>
