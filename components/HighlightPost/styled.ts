@@ -5,6 +5,7 @@ export const HighlightPostWrapper = styled.div`
     grid-template-columns: 1fr 1.25fr;
     grid-gap: 2rem;
     align-items: center;
+    cursor: pointer;
 
     @media (max-width: 1040px) {
         grid-template-columns: 1fr;

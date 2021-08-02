@@ -5,9 +5,8 @@ import { PostPage } from '../../components/PostPage'
 import { getAllPostsForHome, getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 
 
-export default function Post({ post, posts, preview, popularPosts }) {
+export default function Post({ post, popularPosts }) {
   const router = useRouter()
-  const morePosts = posts?.edges
 
   if (!router.isFallback && !post?.slug) {
     return <div>Error!</div>

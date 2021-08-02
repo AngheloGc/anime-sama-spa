@@ -11,13 +11,20 @@ export const GradientPostWrapper = styled.div`
     background-repeat: no-repeat;
     overflow: hidden;
     border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        filter: contrast(115%);
+        transform: scale(102%);
+    }
 `
 
 export const GradientPostContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: end;
+    justify-content: flex-end;
     background: linear-gradient(to bottom, transparent, black);
     padding: 1.5rem;
     min-height: 18rem;

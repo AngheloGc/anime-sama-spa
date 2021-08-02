@@ -7,6 +7,10 @@ export const PostWrapper = styled.main`
     margin: 2rem auto;
     box-sizing: border-box;
 
+    #disqus_recommendations {
+        display: none;
+    }
+
     @media (max-width: 1040px) {
         margin: 0 auto 2rem;
     }
@@ -26,8 +30,8 @@ export const PostWrapper = styled.main`
 
 export const FeaturedImage = styled.img`
     width: 100%;
-    max-height: 24rem;
-    min-height: 24rem;
+    max-height: 28rem;
+    min-height: 28rem;
     object-fit: cover;
     border-radius: 4px;
 
@@ -96,8 +100,25 @@ export const Content = styled.section`
 export const PublicationDate = styled.div`
     margin: 2rem 0 1rem;
     color: #585858;
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-right: 0.5rem;
+    }
 
     @media (max-width: 1040px) {
         padding: 0 2rem;
     }
+`
+
+export const AuthorImage = styled.img`
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 3rem;
+    object-fit: cover;
+`
+
+export const AfterContent = styled.div`
+    padding: 0 2rem;
 `

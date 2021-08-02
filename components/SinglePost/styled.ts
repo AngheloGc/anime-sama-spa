@@ -75,3 +75,23 @@ export const Excerpt = styled.p`
     -webkit-box-orient: vertical;
     white-space: normal;
 `
+
+export const Author = styled.p`
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    color: #333333;
+
+    span {
+        margin: 0 0.25rem;
+    }
+`
+
+export const AuthorImage = styled.img`
+    width: 1rem;
+    height: 1rem;
+    min-height: 1rem!important;
+    max-height: 1rem!important;
+    object-fit: cover;
+    border-radius: 1rem;
+`

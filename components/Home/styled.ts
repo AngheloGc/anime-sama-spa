@@ -26,6 +26,10 @@ export const MainNews = styled.section`
         h3 {
             font-size: 1.5rem;
         }
+
+        p {
+            font-size: 0.9rem;
+        }
     }
 `
 
@@ -105,6 +109,10 @@ export const RankingPostsFooter = styled.div`
     display: grid;
     grid-gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 1040px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 export const HotTrendingPosts = styled.section`
