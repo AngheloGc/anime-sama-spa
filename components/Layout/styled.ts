@@ -19,4 +19,28 @@ export const GlobalStyles = createGlobalStyle`
             margin: 2rem auto;
         }
     }
+
+    /*Animations*/
+    @-webkit-keyframes blink-2 {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.2;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes blink-2 {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.2;
+        }
+        100% {
+          opacity: 1;
+        }
+    }
 `
