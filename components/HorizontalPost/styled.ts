@@ -9,6 +9,8 @@ export const HorizontalPostWrapper = styled.div`
     grid-template-columns: auto 1fr;
     grid-gap: 1rem;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
 
     ${(props: HorizontalPostWrapperProps) => props.size === 'large' && css`
         h3 { font-size: 2rem } p { font-size: 1rem }

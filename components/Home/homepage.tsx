@@ -28,9 +28,9 @@ export const Homepage: React.FC<HomepageProps> = ({ posts }) => {
   return (
     <main>
       <MainNews>
-        <SinglePost postData={mainNews[0]} hasExcerpt={true} size="large" />
-        <SinglePost postData={mainNews[1]} hasExcerpt={true} size="medium" />
-        <SinglePost postData={mainNews[2]} hasExcerpt={true} size="medium" />
+        <SinglePost postData={mainNews[0]} hasExcerpt={true} showAuthor={true} size="large" />
+        <SinglePost postData={mainNews[1]} hasExcerpt={true} showAuthor={true} size="medium" />
+        <SinglePost postData={mainNews[2]} hasExcerpt={true} showAuthor={true} size="medium" />
       </MainNews>
       <Separator size={50} />
       <Reviews>
@@ -58,7 +58,7 @@ export const Homepage: React.FC<HomepageProps> = ({ posts }) => {
         </RankingPosts>
         <HotTrendingPosts>
           <SectionHeadline label="Notas de Interés" />
-          <SinglePost postData={trending[0]} hasExcerpt={true} size="medium" />
+          <SinglePost postData={trending[0]} hasExcerpt={true} showAuthor={true} size="medium" />
           <HotTrendingPostsFooter>
             <HorizontalPost postData={trending[1]} hasExcerpt={false} size="small" />
             <HorizontalPost postData={trending[2]} hasExcerpt={false} size="small" />

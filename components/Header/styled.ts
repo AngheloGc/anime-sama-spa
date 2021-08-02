@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderWrapper = styled.div`
-    background-color: #2C2C2C;
+    background-color: #222;
     padding: 1.25rem 0;
 
     @media (max-width: 1040px) {
