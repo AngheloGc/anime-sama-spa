@@ -12,7 +12,7 @@ export default function Index({ allPosts, footerPosts }) {
   )
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
   const allPosts = await getAllPostsForHome(preview)
   return {
     props: {
