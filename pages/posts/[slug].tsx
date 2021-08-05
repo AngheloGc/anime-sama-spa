@@ -1,11 +1,10 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import { Layout } from '../../components/Layout'
 import { PostPage } from '../../components/PostPage'
-import { getAllPostsForHome, getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
+import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 
 
-export default function Post({ post, popularPosts }) {
+export default function Post({ post }) {
   const router = useRouter()
 
   if (!router.isFallback && !post?.slug) {
@@ -13,22 +12,18 @@ export default function Post({ post, popularPosts }) {
   }
 
   return (
-    <Layout footerPosts={popularPosts}>
-      <PostPage postData={post} />
-    </Layout>
+    <PostPage postData={post} />
   )
 }
 
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPostAndMorePosts(params.slug, preview, previewData)
-  const allPosts = await getAllPostsForHome(preview)
 
   return {
     props: {
       preview,
       post: data.post,
       posts: data.posts,
-      popularPosts: allPosts?.popular.edges,
     },
   }
 }

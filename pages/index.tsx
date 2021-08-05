@@ -1,15 +1,8 @@
 import { Homepage } from '../components/Home/homepage'
-import { Layout } from '../components/Layout'
 import { getAllPostsForHome } from '../lib/api'
 
-
-export default function Index({ allPosts, footerPosts }) {
-
-  return (
-    <Layout footerPosts={footerPosts.popular}>
-      <Homepage posts={allPosts} />
-    </Layout>
-  )
+export default function Index({ allPosts }) {
+  return <Homepage posts={allPosts} />
 }
 
 export async function getServerSideProps({ preview = false }) {
@@ -22,9 +15,6 @@ export async function getServerSideProps({ preview = false }) {
         rankings: allPosts.rankings.edges,
         featured: allPosts.featured.edges,
         trending: allPosts.trending.edges,
-      },
-      footerPosts: {
-        popular: allPosts.popular.edges,
       },
       preview
     }

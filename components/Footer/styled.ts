@@ -109,6 +109,13 @@ export const Icons = styled.div`
 
     svg {
         margin-right: 1rem;
+        cursor: pointer;
+        transition: all 0.2 ease-in-out;
+
+        &:hover {
+            filter: contrast(115%);
+            transform: scale(102%);
+        }
     }
 `
 
