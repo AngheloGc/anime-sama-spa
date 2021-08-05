@@ -13,10 +13,10 @@ export const GlobalStyles = createGlobalStyle`
 
     main {
         max-width: 1040px;
-        margin: 3rem auto;
+        margin: 3rem auto 5rem;
 
         @media (max-width: 1040px) {
-            margin: 2rem auto;
+            margin: 2rem auto 3rem;
         }
     }
 

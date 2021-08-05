@@ -3,7 +3,7 @@ import { HorizontalPost } from '../HorizontalPost'
 import { SectionHeadline } from '../SectionHeadline'
 import { FooterProps } from './props'
 import { Copyright, FooterContent, FooterLeft, FooterRight, FooterWrapper, Icons, Links, PopularPosts, SocialIcons, UsefulLinks } from './styled'
-
+import { SOCIAL_MEDIA_LINKS } from '../../lib/constants'
 export const Footer: React.FC<FooterProps> = ({ popularPosts }) => {
     return (
         <FooterWrapper>
@@ -37,12 +37,24 @@ export const Footer: React.FC<FooterProps> = ({ popularPosts }) => {
                     <SocialIcons>
                         <SectionHeadline label="También nos encuentras en" appearance="compact" />
                         <Icons>
-                            <FacebookIcon />
-                            <InstagramIcon />
-                            <YoutubeIcon />
-                            <TwitterIcon />
-                            <RedditIcon />
-                            <DiscordIcon />
+                            <a href={SOCIAL_MEDIA_LINKS.facebook} target="_blank">
+                                <FacebookIcon />
+                            </a>
+                            <a href={SOCIAL_MEDIA_LINKS.instagram} target="_blank">
+                                <InstagramIcon />
+                            </a>
+                            <a href={SOCIAL_MEDIA_LINKS.youtube} target="_blank">
+                                <YoutubeIcon />
+                            </a>
+                            <a href={SOCIAL_MEDIA_LINKS.twitter} target="_blank">
+                                <TwitterIcon />
+                            </a>
+                            <a href={SOCIAL_MEDIA_LINKS.reddit} target="_blank">
+                                <RedditIcon />
+                            </a>
+                            <a href={SOCIAL_MEDIA_LINKS.discord} target="_blank">
+                                <DiscordIcon />
+                            </a>
                         </Icons>
                     </SocialIcons>
                 </FooterRight>

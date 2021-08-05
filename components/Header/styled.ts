@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.header`
     background-color: #222;
     padding: 1.25rem 0;
 
@@ -84,5 +84,37 @@ export const Menu = styled.div`
         &:hover {
             color: white;
         }
+    }
+`
+
+export const InactiveLink = styled.span`
+    color: #626262;
+    font-size: .95rem;
+    margin-right: 2rem;
+    text-decoration: none;
+    position: relative;
+    cursor: not-allowed;
+
+    &::after {
+        color: #FF6C38;
+        content: '¡Pronto!';
+        font-size: .65rem;
+        opacity: 0.75;
+        position: absolute;
+        top: -0.8rem;
+        right: -1.25rem;
+        //background-color: #FF6C38;
+        padding: 0.1rem 0.25rem;
+        border-radius: 2px;
+    }
+`
+
+export const LinkButton = styled.a`
+    margin-left: auto;
+    text-decoration: none;
+    color: white;
+
+    &:visited {
+        color: white;
     }
 `
