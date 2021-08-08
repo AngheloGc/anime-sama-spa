@@ -22,7 +22,7 @@ export default function Layout({ children }) {
                 }
             }
         }
-    }}`, handleFetch)
+    }}`, handleFetch, { revalidateOnFocus: false })
 
     if (error) return <div>Failed to load</div>
 

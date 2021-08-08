@@ -25,13 +25,13 @@ export const Footer: React.FC<FooterProps> = ({ popularPosts }) => {
                     <UsefulLinks>
                         <SectionHeadline label="Enlaces" appearance="compact" />
                         <Links>
-                            <a href="">Acerca de nosotros</a>
-                            <a href="">Contacto</a>
-                            <a href="">Media Kit</a>
-                            <a href="">Unirse al Equipo</a>
-                            <a href="">Concurso Novelas Ligeras</a>
-                            <a href="">Cultura Anime Sama</a>
-                            <a href="">Spoiler Sama</a>
+                            <a href="/acerca-de-nosotros">Acerca de nosotros</a>
+                            <a href="/contacto">Contacto</a>
+                            <a href="https://dochub.com/animesamadesu/xgNyr6qwbjZP1Y5wA5EbY2/anime-sama-media-kit?dt=CMLZmQyx35xxkgUkCbrF&pg=12" target="_blank">Media Kit</a>
+                            <a href="/unirse-al-equipo">Unirse al Equipo</a>
+                            <a href="/concurso-novelas-ligeras">Concurso Novelas Ligeras</a>
+                            <a href="https://www.facebook.com/groups/culturaanimesamadesu" target="_blank">Cultura Anime Sama</a>
+                            <a href="https://chat.whatsapp.com/FbUJZEONcFsCSSA4CmUFBQ" target="_blank">Spoiler Sama</a>
                         </Links>
                     </UsefulLinks>
                     <SocialIcons>
