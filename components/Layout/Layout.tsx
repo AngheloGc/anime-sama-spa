@@ -6,7 +6,7 @@ import Meta from '../meta'
 import { GlobalStyles } from './styled'
 import { request } from 'graphql-request'
 
-const handleFetch = query => request(process.env.WORDPRESS_API_URL, query)
+const handleFetch = query => request('https://animesama.info/graphql', query)
 
 export default function Layout({ children }) {
     const { data, error } = useSWR(`{
@@ -24,15 +24,13 @@ export default function Layout({ children }) {
         }
     }}`, handleFetch, { revalidateOnFocus: false })
 
-    if (error) return <div>Failed to load</div>
-
     return (
         <div>
             <GlobalStyles />
             <Meta />
             <Header />
             {children}
-            {data && <Footer popularPosts={data?.popular.edges} />}
+            {!error && data && <Footer popularPosts={data?.popular.edges} />}
             <RadioAnimexStickyWindow />
         </div>
     )
