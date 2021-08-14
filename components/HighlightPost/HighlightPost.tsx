@@ -12,7 +12,7 @@ export const HighlightPost:React.FC<HighlightPostProps> = ({ label, postData }) 
         return decodedStripedHTML
     }
     return (
-        <Link href={`/posts/${postData?.node.slug}`}>
+        <Link href={`/${postData?.node.slug}`}>
             <HighlightPostWrapper>
                 <HighlightPostContent>
                     <SectionHeadline label={label} />

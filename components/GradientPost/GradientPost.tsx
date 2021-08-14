@@ -4,7 +4,7 @@ import { GradientPostContent, GradientPostWrapper, Headline, Tag } from './style
 
 export const GradientPost: React.FC<GradientPostProps> = ({ postData, tag }) => {
     return (
-        <Link href={`/posts/${postData?.node.slug}`}>
+        <Link href={`/${postData?.node.slug}`}>
             <GradientPostWrapper imageUrl={postData?.node.featuredImage.node.sourceUrl}>
                 <GradientPostContent>
                     <Tag>{tag}</Tag>

@@ -13,7 +13,7 @@ export const SinglePost: React.FC<SinglePostProps> = ({ postData, hasExcerpt = f
         return decodedStripedHTML
     }
     return (
-        <Link href={`/posts/${postData?.node.slug}`}>
+        <Link href={`/${postData?.node.slug}`}>
             <SinglePostWrapper size={size}>
                 <FeaturedImage src={postData?.node.featuredImage.node.sourceUrl} />
                 <Headline>{postData?.node.title}</Headline>

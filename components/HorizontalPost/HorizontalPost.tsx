@@ -4,7 +4,7 @@ import { Excerpt, FeaturedImage, Headline, HorizontalPostContent, HorizontalPost
 
 export const HorizontalPost: React.FC<HorizontalPostProps> = ({ size, postData, hasExcerpt = false }) => {
     return (
-        <Link href={`/posts/${postData?.node.slug}`}>
+        <Link href={`/${postData?.node.slug}`}>
             <HorizontalPostWrapper size={size}>
                 <FeaturedImage src={postData?.node.featuredImage.node.sourceUrl} />
                 <HorizontalPostContent>
