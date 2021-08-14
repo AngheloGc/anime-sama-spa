@@ -20,6 +20,7 @@ export default function Meta() {
       <meta name="msapplication-TileColor" content="#ffffff"/>
       <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png"/>
       <meta name="theme-color" content="#ffffff"/>
+      <script data-ad-client="ca-pub-7872586247392422" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </Head>
   )
 }
