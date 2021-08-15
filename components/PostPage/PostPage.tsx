@@ -10,7 +10,7 @@ import { AfterContent, AuthorImage, Content, ContentWrapper, FeaturedImage, Post
 const DefaultAuthorImage = 'https://c.disquscdn.com/uploads/forums/559/2040/avatar92.jpg?1586983768'
 
 export const PostPage: React.FC<PostPageProps> = ({postData}) => {
-  const handleExcerpt = (excerpt: string) => {
+  const handleExcerpt = (excerpt: string = '') => {
       const stripedHTML = excerpt.replace(/<[^>]+>/g, '')
       const decodedStripedHTML = he.decode(stripedHTML)
       return decodedStripedHTML
