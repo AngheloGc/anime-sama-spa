@@ -19,7 +19,11 @@ export const ModalWrapper = styled.div`
     place-items: center;
 
     ${(props: ModalWrapperProps) => !props.show && css`
-        display: none
+        height: 0;
+        width: 0;
+        visibility: hidden;
+        z-index: -100;
+        padding: 0;
     `}
 `
 
