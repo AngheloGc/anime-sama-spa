@@ -73,7 +73,7 @@ export const Content = styled.section`
     p {
         margin: 1.5rem 0;
         font-family: 'Roboto';
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 300;
     }
 
