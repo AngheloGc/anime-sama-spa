@@ -11,9 +11,7 @@ export default function Post({ post }) {
     return <div>Error!</div>
   }
 
-  return (
-    <PostPage postData={post} />
-  )
+  return <PostPage postData={post} />
 }
 
 export async function getStaticProps({ params, preview = false, previewData }) {

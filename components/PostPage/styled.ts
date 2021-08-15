@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const PostWrapper = styled.main`
     display: flex;
@@ -30,33 +30,41 @@ export const PostWrapper = styled.main`
 
 export const FeaturedImage = styled.img`
     width: 100%;
-    max-height: 28rem;
-    min-height: 28rem;
+    max-width: 650px;
+    max-height: 28.5rem;
+    height: auto;
     object-fit: cover;
     border-radius: 4px;
 
     @media (max-width: 1040px) {
-        border-radius: 0;
-        max-height: 16rem;
-        min-height: 16rem;
+        height: auto;
+        max-width: 100%;
+        width: 100%;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        display: block;
+        overflow: hidden;
     }
 `
 
 export const Title = styled.h1`
     border-bottom: 3px solid #C9C9C9;
-    padding: 2rem 0;
-    font-size: 2.5rem;
+    padding: 1.25rem 0;
+    font-size: 2.25rem;
     position: relative;
 
     @media (max-width: 1040px) {
         margin: 0 2rem;
         font-size: 1.8rem;
+        padding: 1.5rem 0;
     }
 `
 
 export const Content = styled.section`
-    line-height: 1.9rem;
+    line-height: 2.2rem;
     color: #383838;
+    margin: 2rem 0;
+    max-width: 650px;
 
     @media (max-width: 1040px) {
         padding: 0 2rem;
@@ -65,7 +73,8 @@ export const Content = styled.section`
     p {
         margin: 1.5rem 0;
         font-family: 'Roboto';
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        font-weight: 300;
     }
 
     a {
@@ -97,8 +106,28 @@ export const Content = styled.section`
     }
 `
 
+export const ContentWrapper = styled.div`
+    display: grid;
+    grid-template-columns: auto 600px 1fr;
+    gap: 1.5rem;
+    position: relative;
+    max-width: 100%;
+
+    @media (max-width: 1040px) {
+        grid-template-columns: 1fr;
+
+        aside {
+            display: none
+        }
+
+        section {
+            max-width: 100%;
+        }
+    }
+`
+
 export const PublicationDate = styled.div`
-    margin: 2rem 0 1rem;
+    margin: 2rem 0;
     color: #585858;
     display: flex;
     align-items: center;
@@ -121,4 +150,34 @@ export const AuthorImage = styled.img`
 
 export const AfterContent = styled.div`
     padding: 0 2rem;
+`
+
+interface SocialMediaSharingButtonsWrapperProps {
+    orientation: 'HORIZONTAL' | 'VERTICAL'
+}
+
+export const SocialMediaSharingButtonsWrapper = styled.div`
+
+    display: flex;
+
+    ${(props: SocialMediaSharingButtonsWrapperProps) => props.orientation === 'VERTICAL' && css`
+        flex-direction: column;
+        button {margin-bottom: 0.15rem}
+    `}
+
+    ${(props: SocialMediaSharingButtonsWrapperProps) => props.orientation === 'HORIZONTAL' && css`
+        flex-direction: row;
+        button {margin-right: 0.15rem}
+    `}
+
+`
+
+export const SimilarPostsWrapper = styled.div`
+    h4 {color: #383838}
+`
+
+export const SimilarPostsContent = styled.div`
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 0;
 `
