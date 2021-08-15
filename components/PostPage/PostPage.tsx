@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { DisqusComments } from '../../common/Disqus';
 import { SharePost } from '../SharePost';
 import { PostPageProps } from './props';
@@ -9,6 +10,17 @@ const DefaultAuthorImage = 'https://c.disquscdn.com/uploads/forums/559/2040/avat
 
 export const PostPage: React.FC<PostPageProps> = ({postData}) => {
   return (
+    <>
+    <Head>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@AnimeSamaDesu" />
+        <meta name="twitter:creator" content="@AnimeSamaDesu" />
+        <meta property="og:url" content={global.window && window.location.href} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={postData?.title} />
+        <meta property="og:description" content={postData?.excerpt} />
+        <meta property="og:image" content={postData?.featuredImage.node.sourceUrl} />
+    </Head>
     <PostWrapper>
       <article>
         <Title>{postData?.title}</Title>
@@ -34,5 +46,6 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
         </AfterContent>
       </article>
     </PostWrapper>
+    </>
   );
 };
