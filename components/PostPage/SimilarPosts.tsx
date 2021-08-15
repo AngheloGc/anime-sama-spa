@@ -1,6 +1,7 @@
 import request from 'graphql-request'
 import useSWR from 'swr'
 import { HorizontalPost } from '../HorizontalPost'
+import { SimilarPostsSkeleton } from './SimilarPostsSkeleton'
 import { SimilarPostsContent, SimilarPostsWrapper } from './styled'
 
 const handleFetch = query => request('https://animesama.info/graphql', query)
@@ -21,9 +22,12 @@ export const SimilarPosts: React.FC = () => {
             }
         }}`, handleFetch, { revalidateOnFocus: false })
 
+    if(error) return null
+
     return (
         <SimilarPostsWrapper>
-            {!error && data && (
+            {data
+            && (
                 <>
                 <h4>También te puede interesar:</h4>
                 <SimilarPostsContent>
@@ -33,7 +37,8 @@ export const SimilarPosts: React.FC = () => {
                     <HorizontalPost size="x-small" postData={data?.popular?.edges[3]} hasExcerpt={false} />
                 </SimilarPostsContent>
                 </>
-            )}
+            )
+            || <SimilarPostsSkeleton />}
         </SimilarPostsWrapper>
     )
 }

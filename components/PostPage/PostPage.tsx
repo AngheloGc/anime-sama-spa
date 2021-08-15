@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import he from 'he'
 import { DisqusComments } from '../../common/Disqus';
 import { SharePost } from '../SharePost';
 import { PostPageProps } from './props';
@@ -9,16 +10,22 @@ import { AfterContent, AuthorImage, Content, ContentWrapper, FeaturedImage, Post
 const DefaultAuthorImage = 'https://c.disquscdn.com/uploads/forums/559/2040/avatar92.jpg?1586983768'
 
 export const PostPage: React.FC<PostPageProps> = ({postData}) => {
+  const handleExcerpt = (excerpt: string) => {
+      const stripedHTML = excerpt.replace(/<[^>]+>/g, '')
+      const decodedStripedHTML = he.decode(stripedHTML)
+      return decodedStripedHTML
+  }
+
   return (
     <>
     <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@AnimeSamaDesu" />
         <meta name="twitter:creator" content="@AnimeSamaDesu" />
         <meta property="og:url" content={global.window && window.location.href} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={postData?.title} />
-        <meta property="og:description" content={postData?.excerpt} />
+        <meta property="og:description" content={handleExcerpt(postData?.excerpt)} />
         <meta property="og:image" content={postData?.featuredImage.node.sourceUrl} />
     </Head>
     <PostWrapper>
