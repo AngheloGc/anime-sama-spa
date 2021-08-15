@@ -55,49 +55,83 @@ export const RadioAnimexContent = styled.div`
     color: white;
 
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 
     padding: 1rem 0;
 
     @media (max-width: 1040px) {
+        flex-direction: column;
         padding: 2rem;
+        font-size: 0.8rem;
+
+        button {
+            display: none;
+        }
     }
 `
 
 export const RadioAnimexContentImage = styled.img`
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 3rem;
+    width: 3rem;
     object-fit: cover;
     border-radius: 4px;
     position: relative;
     z-index: 220;
+    margin-right: 0.5rem;
+
+    @media (max-width: 1040px) {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
 `
 
 export const RadioAnimexContentInfoPlayer = styled.div`
     position: relative;
     top: 0.75rem;
 
-    @-moz-document url-prefix() {
-        top: 1.25rem;
-    }
-`
-
-export const RadioAnimexContentInfo = styled.div`
-    display: flex;
-    flex-direction: row;
+    padding-right: 2rem;
 
     @media (max-width: 1040px) {
-        flex-direction: column;
+        padding-right: 0;
+    }
+
+    @-moz-document url-prefix() {
+        top: 1.25rem;
     }
 `
 
 export const RadioAnimexContentInfoTitle = styled.div`
     display: flex;
     align-items: center;
-    margin: 0 1rem;
+    padding-right: 2rem;
+
+    @media (max-width: 1040px) {
+        padding-right: 0;
+    }
 
     h3 {
         margin: 0 0.5rem;
     }
+`
+
+export const Chatbox = styled.div`
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    top: -1rem;
+
+    iframe {
+        max-width: 800px;
+        height: 600px;
+    }
+`
+
+export const TitleChatbox = styled.h2`
+    position: relative;
+    top: -1rem;
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 0.5rem;
 `
