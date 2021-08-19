@@ -53,7 +53,7 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
           <Disqus.DiscussionEmbed
             shortname="animesamadesu"
             config={{
-              url: global.window && window.location.href,
+              url: `https://animesama.net/${postData?.slug}`,
               identifier: postData?.id,
               title: postData?.title,
             }}
