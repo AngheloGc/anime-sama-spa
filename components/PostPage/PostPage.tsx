@@ -1,11 +1,11 @@
-import Head from 'next/head';
+import Head from 'next/head'
 import he from 'he'
-import { DisqusComments } from '../../common/Disqus';
-import { SharePost } from '../SharePost';
-import { PostPageProps } from './props';
-import { SimilarPosts } from './SimilarPosts';
-import { SocialMediaSharingButtons } from './SocialMediaSharingButtons';
+import { SharePost } from '../SharePost'
+import { PostPageProps } from './props'
+import { SimilarPosts } from './SimilarPosts'
+import { SocialMediaSharingButtons } from './SocialMediaSharingButtons'
 import { AfterContent, AuthorImage, Content, ContentWrapper, FeaturedImage, PostWrapper, PublicationDate, Title } from './styled'
+import Disqus from 'disqus-react'
 
 const DefaultAuthorImage = 'https://c.disquscdn.com/uploads/forums/559/2040/avatar92.jpg?1586983768'
 
@@ -50,7 +50,14 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
         </ContentWrapper>
         <SharePost title={postData?.title} description={'Ver nota completa en:'} url={global.window && window.location.href} />
         <AfterContent>
-          <DisqusComments url={global.window && window.location.href} postId={postData?.id} postTitle={postData?.title} />
+          <Disqus.DiscussionEmbed
+            shortname="animesamadesu"
+            config={{
+              url: global.window && window.location.href,
+              identifier: postData?.id,
+              title: postData?.title,
+            }}
+          />
         </AfterContent>
       </article>
     </PostWrapper>
