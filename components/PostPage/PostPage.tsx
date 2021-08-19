@@ -17,14 +17,6 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
       return decodedStripedHTML
   }
 
-  useEffect(() => {
-    console.log(
-      {url: `https://animesama.net/${postData?.slug}`,
-      identifier: postData?.id,
-      title: postData?.title,}
-    )
-  }, [])
-
   return (
     <>
     <Head>
@@ -63,7 +55,7 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
             shortname="animesamadesu"
             config={{
               url: `https://animesama.net/${postData?.slug}`,
-              identifier: postData?.id,
+              identifier: postData?.slug,
               title: postData?.title,
             }}
           />
