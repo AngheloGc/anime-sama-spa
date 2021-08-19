@@ -27,6 +27,7 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
         <meta property="og:title" content={postData?.title} />
         <meta property="og:description" content={handleExcerpt(postData?.excerpt)} />
         <meta property="og:image" content={postData?.featuredImage.node.sourceUrl} />
+        <title>{postData?.title} - Anime Sama</title>
     </Head>
     <PostWrapper>
       <article>
