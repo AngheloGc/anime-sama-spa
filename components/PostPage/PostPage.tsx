@@ -50,7 +50,7 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
         </ContentWrapper>
         <SharePost title={postData?.title} description={'Ver nota completa en:'} url={global.window && window.location.href} />
         <AfterContent>
-          <DisqusComments postId={postData?.id} postTitle={postData?.title} />
+          <DisqusComments url={global.window && window.location.href} postId={postData?.id} postTitle={postData?.title} />
         </AfterContent>
       </article>
     </PostWrapper>
