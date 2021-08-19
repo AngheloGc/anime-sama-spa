@@ -6,7 +6,7 @@ export const DisqusComments: React.FC<DisqusCommentsProps> = ({postId, postTitle
         <Disqus.DiscussionEmbed
           shortname="animesamadesu"
           config={{
-            url: 'https://animesama.net',
+            url,
             identifier: postId,
             title: postTitle,
           }}
