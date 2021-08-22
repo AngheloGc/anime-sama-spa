@@ -173,7 +173,8 @@ export const SocialMediaSharingButtonsWrapper = styled.div`
 `
 
 export const SimilarPostsWrapper = styled.div`
-    h4 {color: #383838}
+    margin-bottom: 2rem;
+    h4 { color: #383838 }
 `
 
 export const SimilarPostsContent = styled.div`
