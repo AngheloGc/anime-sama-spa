@@ -181,3 +181,8 @@ export const SimilarPostsContent = styled.div`
     gap: 1rem;
     padding: 1rem 0;
 `
+
+export const Advertisment = styled.div`
+    position: sticky;
+    top: 2rem;
+`

@@ -4,9 +4,9 @@ import { SharePost } from '../SharePost'
 import { PostPageProps } from './props'
 import { SimilarPosts } from './SimilarPosts'
 import { SocialMediaSharingButtons } from './SocialMediaSharingButtons'
-import { AfterContent, AuthorImage, Content, ContentWrapper, FeaturedImage, PostWrapper, PublicationDate, Title } from './styled'
+import { Advertisment, AfterContent, AuthorImage, Content, ContentWrapper, FeaturedImage, PostWrapper, PublicationDate, Title } from './styled'
 import Disqus from 'disqus-react'
-import { useEffect } from 'react'
+import { PostPageAd } from '../../common/GoogleAdsense'
 
 const DefaultAuthorImage = 'https://c.disquscdn.com/uploads/forums/559/2040/avatar92.jpg?1586983768'
 
@@ -47,6 +47,7 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
           </section>
           <aside>
             <SimilarPosts />
+            <Advertisment dangerouslySetInnerHTML={{ __html: PostPageAd }} />
           </aside>
         </ContentWrapper>
         <SharePost title={postData?.title} description={'Ver nota completa en:'} url={global.window && window.location.href} />
