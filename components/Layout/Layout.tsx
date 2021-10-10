@@ -31,7 +31,7 @@ export default function Layout({ children }) {
             <Header />
             {children}
             {!error && data && <Footer popularPosts={data?.popular.edges} />}
-            <RadioAnimexStickyWindow />
+            {/* <RadioAnimexStickyWindow /> */}
         </div>
     )
 }
