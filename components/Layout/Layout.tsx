@@ -1,5 +1,4 @@
 import useSWR from 'swr'
-import { RadioAnimexStickyWindow } from '../../common/RadioAnimex'
 import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 import Meta from '../meta'
