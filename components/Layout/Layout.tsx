@@ -4,6 +4,7 @@ import { Header } from '../../components/Header'
 import Meta from '../meta'
 import { GlobalStyles } from './styled'
 import { request } from 'graphql-request'
+import { GoogleAnalytics } from '../../common/GoogleAnalytics'
 
 const handleFetch = query => request('https://animesama.info/graphql', query)
 
@@ -27,6 +28,7 @@ export default function Layout({ children }) {
         <div>
             <GlobalStyles />
             <Meta />
+            <GoogleAnalytics />
             <Header />
             {children}
             {!error && data && <Footer popularPosts={data?.popular.edges} />}
