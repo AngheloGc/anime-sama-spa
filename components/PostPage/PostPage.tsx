@@ -1,17 +1,16 @@
 import Head from 'next/head'
-import he from 'he'
 import { SharePost } from '../SharePost'
 import { PostPageProps } from './props'
 import { SimilarPosts } from './SimilarPosts'
 import { SocialMediaSharingButtons } from './SocialMediaSharingButtons'
 import { Advertisment, AfterContent, AuthorImage, Content, ContentWrapper, FeaturedImage, PostWrapper, PublicationDate, Title } from './styled'
-import Disqus from 'disqus-react'
+import { DiscussionEmbed, Recommendations } from 'disqus-react'
 import { PostPageAd } from '../../common/GoogleAdsense'
 import { useExcerpt } from '../../utils'
 
 const DefaultAuthorImage = 'https://c.disquscdn.com/uploads/forums/559/2040/avatar92.jpg?1586983768'
 
-export const PostPage: React.FC<PostPageProps> = ({postData}) => {
+export const PostPage: React.FC<PostPageProps> = ({ postData }) => {
   const { handleExcerpt } = useExcerpt()
 
   return (
@@ -23,7 +22,7 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
         <meta property="og:url" content={global.window && window.location.href} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={postData?.title} />
-        <meta property="og:description" content={handleExcerpt(postData?.excerpt)} />
+        <meta property="og:description" content={handleExcerpt(postData?.excerpt || 'No excerpt')} />
         <meta property="og:image" content={postData?.featuredImage.node.sourceUrl} />
         <title>{postData?.title} - Anime Sama</title>
     </Head>
@@ -49,7 +48,15 @@ export const PostPage: React.FC<PostPageProps> = ({postData}) => {
         </ContentWrapper>
         <SharePost title={postData?.title} description={'Ver nota completa en:'} url={global.window && window.location.href} />
         <AfterContent>
-          <Disqus.DiscussionEmbed
+          <Recommendations
+            shortname="animesamadesu"
+            config={{
+              url: `https://animesama.net/${postData?.slug}`,
+              identifier: postData?.slug,
+              title: postData?.title,
+            }}
+          />
+          <DiscussionEmbed
             shortname="animesamadesu"
             config={{
               url: `https://animesama.net/${postData?.slug}`,
