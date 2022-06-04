@@ -57,7 +57,7 @@ export const Homepage: React.FC<HomepageProps> = ({ posts }) => {
           </RankingPostsFooter>
         </RankingPosts>
         <HotTrendingPosts>
-          <SectionHeadline label="Notas de Interés" />
+          <SectionHeadline label="Eventos" />
           <SinglePost postData={trending[0]} hasExcerpt={true} showAuthor={true} size="medium" />
           <HotTrendingPostsFooter>
             <HorizontalPost postData={trending[1]} hasExcerpt={false} size="small" />

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import { PostPage } from '../../components/PostPage'
-import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
+import { PostPage } from '../components/PostPage'
+import { getAllPostsWithSlug, getPostAndMorePosts } from '../lib/api'
 
 
 export default function Post({ post }) {
@@ -11,9 +11,7 @@ export default function Post({ post }) {
     return <div>Error!</div>
   }
 
-  return (
-    <PostPage postData={post} />
-  )
+  return <PostPage postData={post} />
 }
 
 export async function getStaticProps({ params, preview = false, previewData }) {
@@ -34,7 +32,7 @@ export async function getStaticPaths() {
 
 
   return {
-    paths: allPosts.edges.map(({ node }) => `/posts/${node.slug}`) || [],
+    paths: allPosts.edges.map(({ node }) => `/${node.slug}`) || [],
     fallback: true,
   }
 }

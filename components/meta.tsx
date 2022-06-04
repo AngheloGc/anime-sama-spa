@@ -17,9 +17,12 @@ export default function Meta() {
       <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png"/>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
       <link rel="manifest" href="/favicon/manifest.json"/>
+      <title>Anime Sama - Noticias, reseñas, rankings y mucho más</title>
       <meta name="msapplication-TileColor" content="#ffffff"/>
       <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png"/>
       <meta name="theme-color" content="#ffffff"/>
+      <script data-ad-client="ca-pub-7872586247392422" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7872586247392422" crossOrigin="anonymous"></script>
     </Head>
   )
 }

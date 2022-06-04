@@ -3,17 +3,15 @@ import Link from 'next/link'
 import he from 'he'
 import { SinglePostProps } from './props'
 import { Author, AuthorImage, Excerpt, FeaturedImage, Headline, SinglePostWrapper } from './styled'
+import { useExcerpt } from '../../utils'
 
 const DefaultAuthorImage = 'https://c.disquscdn.com/uploads/forums/559/2040/avatar92.jpg?1586983768'
 
 export const SinglePost: React.FC<SinglePostProps> = ({ postData, hasExcerpt = false, showAuthor = false, size }) => {
-    const handleExcerpt = (excerpt: string) => {
-        const stripedHTML = excerpt.replace(/<[^>]+>/g, '')
-        const decodedStripedHTML = he.decode(stripedHTML)
-        return decodedStripedHTML
-    }
+    const { handleExcerpt } = useExcerpt()
+
     return (
-        <Link href={`/posts/${postData?.node.slug}`}>
+        <Link href={`/${postData?.node.slug}`}>
             <SinglePostWrapper size={size}>
                 <FeaturedImage src={postData?.node.featuredImage.node.sourceUrl} />
                 <Headline>{postData?.node.title}</Headline>

@@ -1,12 +1,11 @@
 import useSWR from 'swr'
-import { RadioAnimexStickyWindow } from '../../common/RadioAnimex'
 import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 import Meta from '../meta'
-import { GlobalStyles } from './styled'
 import { request } from 'graphql-request'
+import { GoogleAnalytics } from '../../common/GoogleAnalytics'
 
-const handleFetch = query => request('https://animesama.net/graphql', query)
+const handleFetch = query => request('https://animesama.info/graphql', query)
 
 export default function Layout({ children }) {
     const { data, error } = useSWR(`{
@@ -22,18 +21,16 @@ export default function Layout({ children }) {
                 }
             }
         }
-    }}`, handleFetch)
-
-    if (error) return <div>Failed to load</div>
+    }}`, handleFetch, { revalidateOnFocus: false })
 
     return (
         <div>
-            <GlobalStyles />
             <Meta />
+            <GoogleAnalytics />
             <Header />
             {children}
-            {data && <Footer popularPosts={data?.popular.edges} />}
-            <RadioAnimexStickyWindow />
+            {!error && data && <Footer popularPosts={data?.popular.edges} />}
+            {/* <RadioAnimexStickyWindow /> */}
         </div>
     )
 }
